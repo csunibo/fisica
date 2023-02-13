@@ -1,0 +1,280 @@
+\documentclass{article}
+
+\title{FORMULARIO FISICA}
+\date{2023-02-13}
+\author{Libera Longo}
+
+%link utili:
+% https://latex.codecogs.com/eqneditor/editor.php
+
+\usepackage[a4paper,left=1cm,right=1cm,top=1cm,bottom=1cm]{geometry}	%margins
+\usepackage{multicol}			%multicolonna
+\setlength{\columnsep}{1cm}
+\usepackage{xcolor}			%colore testo
+\usepackage{amsmath}			%matematica formule
+\usepackage{amsfonts}
+\setcounter{secnumdepth}{0}		%no numerazione section e subsection
+\usepackage{sectsty}			%section font
+
+\sectionfont{\fontsize{10}{10}\selectfont}
+\subsectionfont{\fontsize{8}{10}\selectfont}
+
+\begin{document}
+	%\maketitle
+	\begin{small}
+	\begin{multicols}{3}
+\section{Cinematica}
+		Velocità: $ \vec v = \frac{ \mathrm d \vec r }{ \mathrm d t } $ \\
+		Accelerazione: $ \vec a = \frac{ \mathrm d \vec v }{ \mathrm d t } = \frac{ \mathrm d^2 \vec r }{ \mathrm d t^2 } $
+	\subsection{Moto uniformemente accelerato}
+		\[ v - v_0 = a \cdot t \]
+		\[ x - x_0 = v_0 \cdot t + \frac{1}{2} a t^2 \]
+		\[ x - x_0 = \frac{1}{2} (v_0 + v_x) t \]
+		\[ v_x^2 - v_0^2 = 2 a (x - x_0) \]
+		Corpo in caduta da fermo:
+		\[ v = \sqrt{ 2 g h } \]
+		\[ t = \sqrt{ \frac{ 2h }{ g } } \]
+	\subsection{Moto del proiettile}
+		\[ y = x \cdot \tan \phi - \frac{ g }{ 2 v_0^2 \cos^2 \phi } x^2 \]
+		\[ h_{\max} = \frac{ v_0^2 \sin^2 \phi }{ 2 g } \]
+		\[ x_{\max} = \frac{ v_0^2 \sin( 2 \phi ) }{ g } \]
+	\subsection{Moto Circolare}
+		Velocità angolare: $ \omega = \frac{ \mathrm d \phi }{ \mathrm d t } $ \\
+		Accelerazione angolare: $ \alpha = \frac{ \mathrm d \omega }{ \mathrm d t } = \frac { \mathrm d^2 \phi }{ \mathrm d t^2 } $
+	\subsection{Moto Circolare Uniforme}
+		\[ \omega = \frac{ 2 \pi }{ T } \]
+		\[ v_{tangenziale} = \omega r \]
+		\[ a_{centripeta} = \frac{ v^2 }{ r } = \omega^2 r \]
+	\subsection{Moto Circolare Unif. accelerato}
+		\[ \omega - \omega_0 = \alpha \cdot t \]
+		\[ \phi - \phi_0 = \omega_0 \cdot t + \frac{1}{2} \alpha t^2 \]
+	\subsection{Moto curvilineo}
+		\[ \vec a = a_T \hat \phi + a_R \hat r = \frac{ \mathrm d | \vec v | }{ \mathrm d t } - \frac{ v^2 }{ r } \hat r \]
+\section{Sistemi a più corpi}
+		Massa totale: $ m_T = \sum m_i = \int \mathrm d m $ \\
+		Centro di massa:
+		\[ \vec r_{CM} = \frac{ \sum m_i \vec r_i }{ m_T } = \frac{ \int \vec r_i \mathrm d m }{ m_T } \]
+		\[ \vec v_{CM} = \frac{ \mathrm d \vec r_{CM} }{ \mathrm d t } = \frac{ \sum m_i \vec v_i}{ m_T } \]
+		\[ \vec a_{CM} = \frac{ \mathrm d \vec v_{CM} }{ \mathrm d t } = \frac{ \mathrm d^2 \vec r_{CM} }{ \mathrm d t^2 } \]
+		Momento di inerzia:
+		\[ I_{asse} = \sum m_i r_i^2 = \int r^2 \mathrm d m \]
+		Teorema assi paralleli:
+		\[ I_{asse} = I_{CM} + m D^2 \]
+\section{Forze, Lavoro ed Energia}
+		Legge di Newton: $ \vec F = m \vec a $ \\
+		Momento della forza: $ \vec \tau = \vec r \times \vec F $
+	\subsection{Forze Fondamentali}
+		Forza peso: $ F_g = m g $ \\
+		Forza elastica: $ F_{el} = - k ( x - l_0 ) $ \\
+		Gravità: $ \vec F_g = - G \frac{ M m }{ r^2 } \hat r $ \\
+		Elettronica: $ \vec F_E = \frac{1}{ 4 \pi \varepsilon_0 } \frac{ q_1 q_2 }{ r^2 } \hat r $
+	\subsection{Forze di Attrito}
+		Statico: $ | \vec F_S | = \mu_S | \vec N | $ \\
+		Dinamico: $ \vec F_D = - \mu_D | \vec N | \hat v $ \\
+		Viscoso: $ \vec F_V = - \beta \vec v $
+	\subsection{Lavoro}
+		\[ L = \int_{x_i}^{x_f} \vec F \cdot d \vec l = \int_{\phi_i}^{\phi_f} \tau \mathrm d \omega \]
+		Forza costante: $ L = \vec F \cdot \vec l $ \\
+		Forza elastica:
+		\[ L = - \frac{1}{2} k (x_f - l_0)^2 + \frac{1}{2} k (x_i - k_0)^2 \]
+		Forza peso: $ L = - m g h $ \\
+		Gravità: $ L = G m_1 m_2 \cdot ( \frac{1}{ r_f } - \frac{1}{ r_i } ) $ \\
+		Elettrostatica: $ L = \frac{ q_1 q_2 }{ 4 \pi \varepsilon_0 } \cdot ( \frac{1}{ r_f } - \frac{1}{ r_i } ) $ \\
+		Potenza: $ P = \frac{ \mathrm d L }{ \mathrm d t } = \vec F \cdot \vec v = \tau \omega $
+	\subsection{Energia}
+		Cinetica: $ K = \frac{1}{2} m v^2 $ \\
+		Rotazione: $ K = \begin{cases} \frac{1}{2} m_T v_{CM}^2 + \frac{1}{2} I_{CM} \omega^2 \\
+				\frac{1}{2} I_{AsseFisso} \omega^2 \end{cases} $ \\
+		Forze vive: $ K_f - K_i = L_{TOT} $ \\
+		Potenziale: $ U = - L = - \int_{x_i}^{x_f} \vec F \cdot \mathrm d \vec l $ \\
+		Meccanica: $ E = K + U = \frac{1}{2} m v^2 + U $ \\
+		Conservazione: $ E_f - E_i = L_{NON CONS} $ \\
+		En. potenzile forze fondamentali: \\
+		Forza peso: $ U ( h ) = m g h $ \\
+		Forza elastica: $ U ( x ) = \frac{1}{2} k ( x - l_0 )^2 $ \\
+		Gravità: $ U( r ) = - G \frac{ m_1 m_2 }{ r } $ \\
+		Elettrostatica: $ U ( r ) = \frac{1}{ 4 \pi \varepsilon_0 } \cdot \frac{ q_1 q_2 }{ r } $
+\section{Imulso e Momento Angolare}
+		Quantità di moto: $ \vec p = m \vec v $ \\
+		Impulso: $ \vec I = \vec p_f - \vec p_i = \int_{t_1}^{t_2} \vec F \mathrm d t $ \\
+		Momento angolare: $ \vec L = \vec r \times \vec p $ \\
+		Intorno ad un asse fisso: $ | \vec L | = I_{asse} \cdot \omega $
+	\subsection{Equazioni cardinali}
+		\[ \vec p_T = \sum \vec p_i = m_T \cdot \vec v_{CM} \]
+		\[ \vec L_T = \sum \vec L_i = I_{asse} \cdot \vec \omega \]
+		I card: $ \sum \vec F_{ext} = \frac{ \mathrm d \vec p_T }{ \mathrm d t } = m_T \cdot a_{CM} $ \\
+		II card: $ \sum \vec \tau_{ext} = \frac{ \mathrm d \vec L_T }{ \mathrm d t } $ \\
+		Asse fisso: $ | \sum \vec \tau_{ext} | = I_{asse} \cdot \alpha_{asse} $
+\section{Leggi di conservazione}
+		\[ \vec p_T = costante \Leftrightarrow \sum \vec F_{ext} = 0 \]
+		\[ \vec L_T = costante \Leftrightarrow \sum \vec \tau_{ext} = 0 \]
+		\[ E = costante \Leftrightarrow L_{NON CONS} = 0 \]
+\section{Urti}
+		Per due masse isolate $ \vec p_T = costante $:
+		Anelastico: $ v_f = \frac{ m_1 v_1 + m_2 v_2 }{ m_1 + m_2 } $ \\
+		Elastico (conservazione energia):
+		\[ \begin{cases} m_1 v_{1i} + m_2 v_{2i} = m_1 v_{1f} + m_2 v_{2f}
+		\\ m_1 ( v_{1i}^2 - v_{1f}^2 ) = m_2 ( v_{2f}^2 - v_{2i}^2 ) \end{cases} \]
+		\[ \begin{cases} v_{1f} = \frac{ m_1 - m_2 }{ m_1 + m_2 } v_{1i} + \frac{ 2 m_2 }{ m_1 + m_2 } v_{2i}
+		\\ v_{2f} = \frac{ m_2 - m_1 }{ m_1 + m_2 } v_{2i} + \frac{ 2 m_1 }{ m_1 + m_2 } v_{1i} \end{cases} \]
+\section{Moto Armonico}
+		\[ x ( t ) = A \cos ( \omega t + \phi_0 ) \]
+		\[ v ( t ) = - \omega A \sin ( \omega t + \phi_0 ) \]
+		\[ a ( t ) = - \omega^2 A \cos ( \omega t + \phi_0 ) = - \omega^2 x( t ) \]
+		\[ A = \sqrt{ x_0^2 + ( \frac{ v_0 }{ \omega } )^2 } \]
+		\[ \phi_0 = \arctan ( - \frac{ v_0 }{ \omega x_0 } ) \]
+		\[ f = \frac{ \omega }{ 2 \pi } \;,\; T = \frac{ 2 \pi }{ \omega } \]
+		Molla: $ \omega = \sqrt{ \frac{ k }{ m } } $ \\
+		Pendolo: $ \omega = \sqrt{ \frac{ g }{ L } } $
+\section{Momenti di inerzia notevoli}
+		Anello intorno asse: $ I = m r^2 $ \\
+		Cilindro pieno intorno asse: $ I = \frac{1}{2} m r^2 $ \\
+		Sbarretta sottile, asse CM: $ I = \frac{1}{ 12 } m L^2 $ \\
+		Sfera piena, asse CM: $ I = \frac{ 2 }{ 5 } m r^2 $ \\
+		Lastra quadrata, asse $\perp$ : $ I = \frac{1}{ 6 } m L^2 $
+\section{Gravitazione}
+		Terza legge di Keplero: $ T^2 = ( \frac{ 4 \pi^2 }{ GM_S } ) R^3 $ \\
+		Vel. di fuga: $ v = \sqrt{ \frac{ 2 GM_T }{ R_T } } $
+\section{Elasticità}
+		Modulo di Young: $ \frac{ F }{ A } = Y \cdot \frac{ \triangle L }{ L } $ \\
+		Compressibilità: $ \triangle p = - B \cdot \frac{ \triangle V }{ V } $ \\
+		Modulo a taglio: $ \frac{ F }{ A } = M_t \cdot \frac{ \triangle x }{ h } $
+\section{Fluidi}
+		Spinta di Archimede: $ B_A = \rho_L V_g $ \\
+		Continuità: $ A \cdot v = costante $ \\
+		Bernoulli: $ p + \frac{1}{2} p v^2 + p g y = costante $
+\section{Onde}
+		Velocità $v$, pulsazione $\omega$, lunghezza d'onda $\lambda$, periodo $T$, frequenza $f$, numero d'onda $k$.
+		\[ v = \frac{ \omega }{ k } = \frac{ \lambda }{ T } = \lambda f \]
+		\[ \omega = \frac{ 2 \pi }{ T } \;,\; k = \frac{ 2 \pi }{ \lambda } \]
+	\subsection{Onde su una corda}
+		Velocità: $ v = \sqrt{ \frac{ T }{ \mu } } $ \\
+		Spostamento: $ y = y_{\max} \sin ( k x - \omega t ) $ \\
+		Potenza: $ P = \frac{1}{2} \mu v ( \omega y_{\max} )^2 $
+	\subsection{Onde sonore}
+		Velocità: $ v = \sqrt{ \frac{ B }{ \rho } } = \sqrt{ \frac{ \gamma p }{ \rho } } $
+		\[ v ( T ) = v ( T_0 ) \sqrt{ \frac{ T }{ T_0 } } \]
+		Spostamento: $ s = s_{\max} \cos ( k x - \omega t ) $ \\
+		Pressione $ \triangle P = \triangle P_{\max} \sin ( k x - \omega t ) $
+		\[ \triangle P_{\max} = p v \omega s_{\max} \]
+		Intensità: $ I = \frac{1}{2} p v ( \omega s_{\max} )^2 = \frac{ \triangle P_{\max}^2 }{ 2 \rho v } $ \\
+		Intensità (dB): $ \beta = 10 \log_{10} \frac{ I }{ I_0 } $ \\
+		Soglia udibile: $ I_0 = 1.0 \times 10^{-12} \frac{ W }{ m^2 } $
+	\subsection{Effetto Doppler}
+		\[ f' = \left ( \frac{ v + v_O \cos \phi_O }{ v - v_S \cos \phi_S } \right ) f \]
+\section{Termodinamica}
+	\subsection{Primo principio}
+		Calore e cap. termica: $ Q = C \cdot \triangle T $ \\
+		Calore latente di trasf.: $ L_t = \frac{ Q }{ m } $ \\
+		Lavoro \underline{sul} sistema: $ d W = - p d V $ \\
+		En. interna: \[ \triangle U = \begin{cases} Q + W_{sul sistema} \\ Q - W_{del sistema} \end{cases} \]
+		Entropia: $ \triangle S_{AB} = \int_{A}^{B} \frac{ d Q_{REV} }{ T } $
+	\subsection{Calore specifico}
+		Per unità di massa: $ c = \frac{ C }{ m } $ \\
+		Per mole: $ c_m = \frac{ C }{ n } $ \\
+		Per i solidi: $ c_m \approx 3 R $ \\
+		Gas perfetto: $ c_p - c_V = R $ \\
+		\begin{tabular}{l|lll}
+			          & $c_V$             & $c_p$             & $\gamma = \frac{ c_p }{ c_V }$ \\
+			monoatom. & $\frac{ 3 }{2} R$ & $\frac{ 5 }{2} R$ & $\frac{ 5 }{2}$ \\
+			biatomico & $\frac{ 5 }{2} R$ & $\frac{ 7 }{2} R$ & $\frac{ 7 }{2}$
+		\end{tabular}
+	\subsection{Gas perfetti}
+		Eq. stato: $ p V = n R T = N k_b T $ \\
+		Energia interna: $ \triangle U = n c_V \triangle V $ \\
+		Entropia: $ \triangle S = n c_V \ln \frac{ T_f }{ T_i } + n R \ln \frac{ V_f }{ V_i } $ \\
+		\underline{Isocora} ($ \triangle V = 0 $): $ W = 0 $ ; $ Q = n c_v \triangle T $ \\
+		\underline{Isobara} ($ \triangle p = 0 $): \[ W = - p \triangle V \;;\; Q = n c_p \triangle T \]
+		\underline{Isoterma} ($ \triangle T = 0 $): \[ W = - Q = - n R T \ln \frac{ V_f }{ V_i } \]
+		\underline{Adiabatica} ($ Q = 0 $): $ p V^{\gamma} = cost. $; $ T V^{\gamma -1} = cost.$ ; $ p^{1 - \gamma} T^{\gamma} = cost.$ ;
+					$ W = \triangle U = \frac{1}{ \gamma -1 } ( P_f V_f - P_i V_i ) $ 
+	\subsection{Macchine termiche}
+		Efficienza: $ \eta = \frac{ W }{ Q_R } = 1 - \frac{ Q_C }{ Q_H } $
+		\[ C.O.P. \; frigorifero = \frac{ Q_C }{ W } \]
+		\[ C.O.P. \; pompa di calore = \frac{ Q_H }{ W } \]
+		Eff. di Carnot: $ \eta_{REV} = 1 - \frac{ T_C }{ T_H } $ \\
+		Teorema di Carnot: $ \eta \leq \eta_{REV} $
+	\subsection{Espansione termica dei solidi}
+		Esp. lineare: $ \frac{ \triangle L }{ L_i } = \alpha \triangle T $ \\
+		Esp. volumica: $ \frac{ \triangle V }{ V_i } = \beta \triangle T $ \\
+		Coefficenti: $ \beta = 3 \alpha $ \\
+		$\beta$ gas perfetto, $p$ costante: $ \beta = \frac{1}{ T } $
+	\subsection{Conduzione e irraggiamento}
+		Corrente termica: \[ P = \frac{ \triangle Q }{ \triangle t } = \frac{ \triangle T }{ R } = \frac{ k A }{ \triangle x } \triangle T \]
+		Resistenza termica: $ R = \frac{ \triangle x }{ k A } $ \\
+		Resistenza serie: $ R_{eq} = R_1 + R_2 $ \\
+		Resistenza parallelo: $ \frac{1}{ R_{eq} } = \frac{1}{ R_1 } + \frac{1}{ R_2 } $ \\
+		Legge Stefan-Boltzmann: $ P = e \sigma A T^4 $
+		L. onda emissione: $ \lambda_{\max} = \frac{ 2.898 mmK }{ T } $
+	\subsection{Gas reali}
+		Eq. Van Der Waals: \[ ( p + a ( \frac{ n }{ v } )^2 ) ( V - n b ) = n R T \]
+\section{Calcolo vettoriale}
+		Prodotto scalare:
+		\[ \vec A \cdot \vec B = | \vec A | | \vec B | \cos \phi \]
+		\[ \vec A \cdot \vec B = A_x B_x + A_y B_y + A_z B_z \]
+		\[ | \vec A | = \sqrt{ \vec A \cdot \vec A } = \sqrt{ A_x^2 + A_y^2 + A_z^2 } \]
+		versore: $ \hat A = \frac{ \vec A }{ | \vec A | } $ \\
+		Prodotto vettoriale:
+		\[ \vec A \times \vec B = \begin{vmatrix} \hat i & \hat j & \hat k \\ A_x & A_y & A_z \\ B_x & B_y & B_z \end{vmatrix} \]
+		$ \vec A \times \vec B = ( A_y B_z - A_z B_y ) \hat i + ( A_z B_z - A_x B_z ) \hat j + ( A_x B_y - A_y B_x ) \hat k $
+\section{Costanti fisiche}
+	\subsection{Costanti fondamentali}
+		Grav.: $ G = 6.67 \times 10^{-11} \frac{ m^3 }{ s^2 \cdot kg } $ \\
+		Vel. luce nel vuoto: $ c = 3.00 \times 10^{8} \frac{ m }{ s } $ \\
+		Carica elementare: $ e = 1.60 \times 10^{-19} C $ \\
+		Massa elettrone: $ m_e = 9.11 \times 10^{-31} kg $ \\
+		Massa protone: $ m_p = 1.67 \times 10^{-27} kg $ \\
+		Cost. dielettrica: $ \varepsilon_0 = 8.85 \times 10^{-12} \frac{ F }{ m } $ \\
+		Perm. magnetica: $ \mu_0 = 4 \pi \times 10^{-7} \frac{ H }{ m } $ \\
+		Cost. Boltzmann: $ k_b = 1.38 \times 10^{-23} \frac{ J }{ K } $ \\
+		N. Avogadro: $ N_A = 6.022 \times 10^{23} mol^{-1} $ \\
+		C. dei gas: $ R = \begin{cases} 8.314 \frac{ J }{ mol \cdot K } \\ 0.082 \frac{ L \cdot atm }{ mol \cdot K } \end{cases} $ \\
+		C. Stefan-Boltzmann: \[ \sigma = 5.6 \times 10^{-8} \frac{ W }{ m^2 \cdot K^4 } \]
+	\subsection{Altre costanti}
+		Accel gravità sulla terra: $ g = 9.81 \frac{ m }{ s^2 } $ \\
+		Raggio terra: $ R_T = 6.37 \times 10^{6} m $ \\
+		Massa terra: $ M_T = 5.98 \times 10^{24} kg $ \\
+		Massa sole: $ M_S = 1.99 \times 10^{30} kg $ \\
+		Massa luna: $ M_L = 7.36 \times 10^{22} kg $ \\
+		Vol 1 mole di gas STP: $ V_{STP} = 22.4 L $ \\
+		Temp. 0 assoluto: $ \phi_0 = -273.15 ^{\circ} C $
+\section{Trigonometria}
+		$ \sin^2 ( \alpha ) + cos^2 ( \alpha ) = 1 $, $ \tan ( \alpha ) = \frac{ \sin ( \alpha ) }{ \cos ( \alpha ) } $,
+		$ \sin ( - \alpha ) = - \sin ( \alpha ) $, $ \cos ( - \alpha ) = \cos ( \alpha ) $
+		\[ \sin ( \alpha \pm \beta ) = \sin ( \alpha ) \cos ( \beta ) \pm \cos ( \alpha ) \sin ( \beta ) \]
+		\[ \cos ( \alpha \pm \beta ) = \cos ( \alpha ) \cos ( \beta ) \mp \sin ( \alpha ) \sin ( \beta ) \]
+		\[ \sin ( \alpha ) = \pm \cos ( \frac{ \pi }{2} \mp \alpha ) = \pm \sin ( \pi \mp \alpha ) \]
+		\[ \cos ( \alpha ) = \sin ( \frac{ \pi }{2} \pm \alpha ) = - \cos ( \pi \pm \alpha ) \]
+		$ \sin^2 ( \alpha ) = \frac{ 1 - \cos ( 2 \alpha ) }{2} $, $ \cos^2 ( \alpha ) = \frac{ 1 + \cos ( 2 \alpha ) }{2} $
+		\[ \sin ( \alpha ) + \sin ( \beta ) = 2 \cos \frac{ \alpha - \beta }{2} \sin \frac{ \alpha + \beta }{2} \]
+		\[ \cos ( \alpha ) + \cos ( \beta ) = 2 \cos \frac{ \alpha - \beta }{2} \cos \frac{ \alpha + \beta }{2} \]
+\section{Derivate}
+		\[ \frac{ \mathrm d }{ \mathrm d x} f ( x ) = f' ( x ) \]
+		\[ \frac{ \mathrm d }{ \mathrm d x} ( a \cdot x ) = a f' ( a \cdot x ) \]
+		\[ \frac{ \mathrm d }{ \mathrm d x} f ( g ( x ) ) = f' ( g ( x ) ) \cdot g' ( x ) \]
+		\[ \frac{ \mathrm d }{ \mathrm d x} x^n = n x^{n-1} \]
+		\[ \frac{ \mathrm d }{ \mathrm d x} \frac{1}{ x^n } = - n \frac{1}{ x^{n+1} } \]
+		\[ \frac{ \mathrm d }{ \mathrm d x} e^x = e^x \]
+		\[ \frac{ \mathrm d }{ \mathrm d x} \ln x = \frac{1}{ x } \]
+		\[ \frac{ \mathrm d }{ \mathrm d x} \sin ( x ) = \cos ( x ) \]
+		\[ \frac{ \mathrm d }{ \mathrm d x} \cos ( x ) = - \sin ( x ) \]
+\section{Integrali}
+		\[ \int f ( x ) \mathrm d x = I ( x ) \]
+		\[ \int f ( x - a ) \mathrm d x = I ( x - a ) \]
+		\[ \int f ( a \cdot x ) \mathrm d x = \frac{ I (a \cdot x) }{ a } \]
+		\[ \int x^n \mathrm d x = \frac{ x^{n+1} }{ n+1 } \;,\; n \neq -1 \]
+		\[ \int \frac{1}{ x^n } \mathrm d x = - \frac{1}{ ( n-1 ) } \cdot \frac{1}{ x^{n-1} } \;,\; n \neq 1 \]
+		\[ \int \frac{1}{ x } \mathrm d x = \ln x \]
+		\[ \int e^x \mathrm d x = e^x \]
+		\[ \int \sin ( x ) \mathrm d x = \cos ( x ) \]
+		\[ \int \cos ( x ) \mathrm d x = - \sin ( x ) \]
+		\[ \int_{x_0}^{x_1} f ( x ) \mathrm d x = I ( x_1 ) - I ( x_0 ) \]
+\section{Approssimazioni ($x_0 = 0$)}
+		\[ \sin x = x + O ( x^2 ) \]
+		\[ ( 1 + x )^{\alpha} = 1 + \alpha x + O ( x^2 ) \]
+		\[ \ln ( 1 + x ) = x + O ( x^2 ) \]
+
+	\end{multicols}
+	\end{small}
+\end{document}
+
